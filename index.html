@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <img src="/images/mine.png" alt="Profile Picture" data-testid="profilePicture">
+        <h2 data-testid="fullName">Ifeoma Sylvia Dike</h2>
+        <h3 data-testid="jobTitle">Software Engineer</h3>
+        <p data-testid="shortBio">Front End Developer with 2+ years of experience in web development. Interested in building applications that enhance users' experience. <br/>When I'm not coding, I'm spending time with family and vlogging about my life.</p>
+        <p data-testid="currentLocation">Lagos, Nigeria</p>
+        <p data-testid="emailAddress">ifeomasylvia.dike@gmail.com</p>
+        <div class="social-links" data-testid="socialLinks">
+            <a href="https://www.linkedin/in/ifeomasylviadike" class="fa fa-linkedin"></a>
+            <a href="https://www.github.com/IfeomaSD" class="fa fa-github"></a>
+            <a href="https://www.facebook.com/ifeomasylviadike" class="fa fa-facebook"></a>
+        </div>
+        <p id="utcTime" data-testid="currentTimeUTC"></p>
+    </div>
+
+    <script>
+        function updateTime() {
+            document.getElementById("utcTime").textContent = new Date().toUTCString();
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
